@@ -69,11 +69,11 @@ impl ExpandedKeyPair {
         }
     }
 
-    fn get_private_key(&self) -> Scalar<Ed25519> {
+    pub fn get_private_key(&self) -> Scalar<Ed25519> {
         self.expanded_private_key.private_key.clone()
     }
 
-    fn get_prefix(&self) -> Scalar<Ed25519> {
+    pub fn get_prefix(&self) -> Scalar<Ed25519> {
         self.expanded_private_key.prefix.clone()
     }
 }
